@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+$font:'Poppins', sans-serif;
+$color: #fff;
+$color1: #000;
+$color2: rgb(224, 92, 92);
+
+@mixin MP() {
+  margin: 0;
+  padding: 0;
+}
+
+
+*{
+  @include MP();
+  font-family: $font;
+}
+
+body{overflow-x: hidden;}
+
+header{
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+  background: $color;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 68px;
+
+#check-one{
+  display: none;
+}
+
+  .logo{
+    height: 70px;
+    line-height: 70px;
+    padding: 0 20px;
+    float: left;
+  }
+
+  nav{
+    float: right;
+    margin-top: -30px;
+  }
+
+  ul{
+    @include MP();
+  }
+
+  li{
+    list-style: none;
+    display: flex;
+  }
+  
+  a{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color:$color1;
+  }
+  
+  .active, a:hover{
+    background: $color2;
+    color: #000;
+    transition: 0.5s;
+  }
+}
+
+@media (max-width: 1200px){
+}
+@media (max-width: 650px){
+  #check-one{
+    display: none;
+  }
+  #check-one:checked ~ nav{
+display: block;
+z-index: 2;
+  }
+  #check-one:not(:checked) ~ nav {
+    display: none;
+      }
+      #check-one:checked ~ .menu-togglle:before{
+        display: block;
+          }
+          #check-one:checked ~ .menu-toggle{
+            display: block;
+              }
+            
+  #label1{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    float: right;
+    cursor: pointer;
+  }
+  .menu-togglle{
+  &:before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    color: $color2;
+    font-size: 40px;
+    position: absolute;
+    right: 27px;
+    top: auto;
+
+
+  }
+}
+  nav{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: $color2;
+    top: 97px;
+    
+  }
+  header li {
+    list-style: none;
+    display: block;
+    text-align: center;
+  a{
+    border-bottom: 1px solid $color1;
+    font-size: 22px;
+    padding: 30px;
+  }
+  }
+}
+img {vertical-align: middle;}
+.links{
+    position: absolute;
+    cursor: pointer;
+    bottom: 376px;
+    border-radius: 50%; 
+    padding: 12px 21px;
+    border: none;
+    @media only screen and (max-width: 900px) {
+      bottom: 300px;
+      padding: 8px 15px;
+  }
+  @media (min-width: 900px) and (max-width: 1535px) {
+    bottom:250px;
+    padding: 8px 15px;
+}
+}
+#prev{
+    left: 3%;
+    @media only screen and (max-width: 700px) {
+      left: 5px;
+  }
+}
+#next{
+    right: 3%;
+    @media only screen and (max-width: 700px) {
+      right: 5px;
+  }
+}

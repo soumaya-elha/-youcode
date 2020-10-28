@@ -1,0 +1,156 @@
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="css/book.css">
+                <title>Booking</title>
+            </head>
+            <body>
+            
+              <header>
+                <img src="img/logo2.png" alt="logoo" class="logo">
+                <input type="checkbox" id="check-one">
+                <label for="check-one" id="label1">
+                <div class="menu-toggle">
+                </div>
+                <div class="menu-togglle">
+                </div>
+              </label>
+                <nav style="margin-top: -6px;z-index: 1;top: 156px;">
+                  <ul class="active1">
+                    <li>
+                      <a href="#" class="active">Home</a>
+                      <a href="#">Réservation</a>
+                      <a href="#">Sign In</a>
+                    </li>
+                  </ul>
+                </nav>
+              </header>
+            
+            
+                <form action="">
+                    <!--  General -->
+                    <div class="form-group">
+                      <h2 class="heading">Booking Zinnia Caftan</h2>
+                      <div class="controls">
+                        <input type="text" id="name"  placeholder="name" onkeyup="inptchamp(this,regNom)">
+                      </div>
+                      <div class="controls">
+                        <input type="text" id="email"  placeholder="email" onkeyup="inptchamp(this,regEmail)" >
+                          </div>       
+                      <div class="controls">
+                        <input type="tel" id="phone" class="floatLabel" placeholder="phone" onkeyup="inptchamp(this,regPhon)">
+                     
+                      </div>
+                        <div class="grid">
+                          <div class="col-2-3">
+                            <div class="controls">
+                             <input type="text" id="street" class="floatLabel" placeholder="street" onkeyup="inptchamp(this,regNom)">
+                            </div>          
+                          </div>
+                          <div class="col-1-3">
+                            <div class="controls">
+                              <input type="number" id="street-number" class="floatLabel" placeholder="street-number">
+                            </div>          
+                          </div>
+                        </div>
+                        <div class="grid">
+                          <div class="col-2-3">
+                            <div class="controls">
+                              <input type="text" id="city" class="floatLabel" placeholder="city" onkeyup="inptchamp(this,regVille)">
+                            </div>         
+                          </div>
+                          <div class="col-1-3">
+                            <div class="controls">
+                              <input type="text" id="post-code" class="floatLabel" placeholder="post-code" onkeyup="inptchamp(this,regPoste)">
+                            </div>         
+                          </div>
+                        </div>
+                        <!-- <div class="controls">
+                          <input type="text" id="country" class="floatLabel" name="country">
+                          <label for="country">Country</label>
+                        </div> -->
+                    </div>
+                    <!--  Details -->
+                    <div class="form-group">
+                      <h2 class="heading">Details</h2>
+                      <div class="grid">
+                      <div class="col-1-4 col-1-4-sm">
+                        <div class="controls">
+                          from:
+                          <input type="date" id="arrive" class="floatLabel" placeholder="arrive">
+                        </div>      
+                      </div>
+                      <div class="col-1-4 col-1-4-sm">
+                        <div class="controls">
+                          To :
+                          <input type="date" id="depart" class="floatLabel" placeholder="depart" />
+                        </div>      
+                      </div>
+                        </div>
+                        <div class="grid">
+                      <div class="col-1-3 col-1-3-sm">
+                        <div class="controls">
+                          <i class="fa fa-sort"></i>
+                          Amount :
+                          <select class="floatLabel">
+                            <option value="blank"></option>
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                          </select>
+
+                          <select class="floatLabel">
+                            <option value="blank"></option>
+                            <option value="1">Caftan - jacinthe</option>
+                            <option value="2" selected>Caftan Amaryllis</option>
+                            <option value="3">Caftan Amarillo 2</option>
+                            <option value="4">Negro Caftan</option>
+                          </select>
+                        </div>      
+                      </div>
+                       </div>
+
+
+                        <div class="grid">
+                          <p class="info-text">Please describe your needs e.g. Extra beds, children's cots</p>
+                          <br>
+                          <div class="controls">
+                            <textarea name="comments" class="floatLabel" id="comments" placeholder="comments"></textarea>
+                            </div>
+                              <button type="submit" value="Submit" class="col-1-4" onclick="clickAlert()">Submit</button>
+                        </div>  
+                    </div> <!-- /.form-group -->
+                  </form> 
+                  <footer>
+                    <div class="footer-container">
+                      <div class="left-col">
+                        <img src="img/logo2.png" alt="bvb" class="logofix">
+                        <div class="social-media">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                          <a href="#"><i class="fab fa-youtube"></i></a>
+                          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <p class="rights-text">© 2020 Created By Tahixos All Rights Reserved.</p>
+                      </div>
+                  
+                      <div class="right-col">
+                        <h1>Our Newsletter</h1>
+                        <div class="border"></div>
+                        <p>Enter Your Email to get our news and updates.</p>
+                        <form action="" class="newsletter-form">
+                          <input type="text" class="txtb" placeholder="Enter Your Email">
+                          <input type="submit" class="btn" value="submit" >
+                        </form>
+                      </div>
+                    </div>
+                  </footer>
+            
+                  <script src="js/jsboooking.js"></script>
+            </body>
+            </html>
+            

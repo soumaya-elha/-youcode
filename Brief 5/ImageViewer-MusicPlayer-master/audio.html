@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <div class="navbar">
+        <div class="inav">
+          <!-- logo -->
+          <img src="logo.png" alt="" srcset="">
+          <ul>
+            <li><a href="audio.html">Music player</a></li>
+            <li><a href="index.html">Image viewer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="header">
+        <h1> <span>Music</span> for everyone.</h1>
+      <img src="hd.png" alt="" srcset="">
+      </div>
+     
+      <div class="all">
+        <h1 class="h1">Music player</h1>
+     </div>
+       <div class="audio">
+            <div class="audio-player">
+                <button onclick="previous('audio')" id="pre-audio" style="border-bottom-left-radius: 50%; border-top-left-radius: 50%;">&lt;&lt; Previous</button>
+                <audio src="" id="audio" controls></audio>
+                <button onclick="next('audio')"id="next-audio" style="border-bottom-right-radius: 50%; border-top-right-radius: 50%;">Next &gt;&gt;</button>
+            </div>
+            <p id="audio-info">No audio - No album </p>
+            <div class="input-controller">
+                <div class="inputs">
+                    <input id="url-audio" type="text" placeholder="Insert your audio url here">
+                    <div class="input-group">
+                        <input id="title-audio" type="text" placeholder="insert the audio title here">
+                        <input id="album-audio" type="text" placeholder="insert the audio album here">
+                        <input id="album-genre" type="text" placeholder="insert the audio genre here">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button style="background-color: mediumseagreen;" onclick="add('audio')">Add</button>
+                    <div class="input-group">
+                        <button style="background-color: mediumvioletred; flex-grow: 1;"
+                            onclick="dequeue('audio')">Delete last</button>
+                        <button style="background-color: mediumvioletred; flex-grow: 1;" onclick="pop('audio')">Delete first</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

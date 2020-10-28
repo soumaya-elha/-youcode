@@ -1,0 +1,131 @@
+$color2: rgb(224, 92, 92);
+
+@mixin blank1() {
+    height: 50px;
+   }
+
+    .blank{
+        @include blank1();
+    }
+
+.container1{
+    width: 100%;
+   margin-bottom: 60px;
+       display: flex;
+       @media only screen and (max-width: 700px) {
+           flex-direction: column;
+       }
+
+    .first{
+        height: 300px;
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @media only screen and (max-width: 700px) {
+          margin: 10px auto;
+        }
+    }
+
+    .royale{
+        text-align: center;
+        position: absolute;
+        opacity: 0;
+        transition: .5s ease;
+        &:hover{
+        background: $color2;
+        opacity: 1;
+        }
+    }
+    .contnt{
+        color: whitesmoke;
+        font-size: x-large;
+    }
+}
+      
+      * {
+        box-sizing: border-box;
+      }
+          
+      
+      .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+// Gallery
+.responsive{
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+    @media only screen and (max-width: 700px) {
+          width: 49.99999%;
+          margin: 6px 0;
+        
+      }
+      @media only screen and (max-width: 500px) {
+          width: 100%;
+        }
+    .gallery {
+        border: 1px solid #ccc;
+      
+      
+       &:hover {
+        border: 1px solid #777;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .desc {
+        padding: 15px;
+        text-align: center;
+      }
+    }
+}
+img.boxing{
+    max-width: 50px;
+    position: absolute;
+}
+section{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    @media only screen and (max-width: 700px){
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    background : {image: url(../img//11k.jpg);
+        repeat:no-repeat;
+        size: cover
+    };
+    div{
+        width: 20%;
+        height: 80%;
+        @media only screen and (max-width: 700px){
+            width: 50%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        h1{
+            text-align: center;
+        }
+        div{
+            width: 100%;
+            margin-top: 10px;
+            background-color: white;
+            text-align: center;
+            box-shadow: -5px 8px 20px grey;
+            padding-top: 19px;
+            color: gray;
+            strong{
+                color: red;
+            }
+        }
+    }
+}
+
+
